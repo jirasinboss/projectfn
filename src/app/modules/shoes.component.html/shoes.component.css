@@ -1,0 +1,54 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px; /* ระยะห่างระหว่างสินค้าแต่ละชิ้น */
+    justify-content: space-between;
+    margin: -20px; /* Adjust as needed */
+    background-color:#f4f4f4ce;/* Inner content background */
+
+  }
+  
+
+  .product-item {
+    flex: 1 1 30%;
+    border: 5px solid #ffffff;
+    border-radius: 3%;
+    padding: 50px;
+    width: calc(33%); /* กำหนดให้แต่ละช่องกว้างประมาณ 1 ใน 3 ของพื้นที่ที่มี */
+    box-sizing: border-box;
+    max-width: calc(33.33% - 1px);
+  }
+  
+  .product-container-wrapper {
+    background-color: #17a6de;
+    padding: 20px;
+}
+
+  .product-image {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+   button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .green-button {
+    background-color: rgb(0, 142, 0);
+    color: white;
+    border-color: rgb(0, 142, 0);
+}
+
+.green-button:hover {
+    background-color: rgb(0, 142, 0);
+    border-color: rgb(0, 142, 0);
+}
