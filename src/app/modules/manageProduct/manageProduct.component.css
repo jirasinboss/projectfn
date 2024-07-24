@@ -1,0 +1,101 @@
+/* Container and card styling */
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* Header styling */
+.card-header h6 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Button styling */
+.btn {
+    border-radius: 5px;
+    font-size: 0.875rem;
+    padding: 8px 16px;
+}
+
+.bg-gradient-success {
+    background: linear-gradient(to right, #28a745, #20c997);
+    color: white;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Table styling */
+.table {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.table tbody td {
+    vertical-align: middle;
+}
+
+.table img.avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.text-secondary {
+    color: #6c757d;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 767.98px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .card-header h6 {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+}
+.bg-gradient-primary {
+    background: linear-gradient(to right, #ff7e5f, #ffbf8f); /* Example gradient background */
+  }
+  .bg-gradient-primary {
+    background-color: #ff7e5f; /* Example solid background color */
+  }
+    

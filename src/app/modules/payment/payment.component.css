@@ -1,33 +1,193 @@
+/* Center the content on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes full viewport height */
+    margin: 0;
+    background-color: #f4f4f4; /* Background color for the whole page */
+}
+
+/* Container for payment content */
 .product-container1 {
-    padding: 20px;
+    padding: 150px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    gap: 1px; /* ระยะห่างระหว่างสินค้าแต่ละชิ้น */
+    gap: 1px; /* Distance between items */
     justify-content: space-between;
-    margin: -20px; /* Adjust as needed */
-    background-color: #f4f4f4; /* Inner content background */
+    margin: 0; /* Reset margin */
+    text-align: center; /* Center text inside the container */
 }
 
+/* Header styling */
 .product-container1 h2 {
-    text-align: center;
+    text-align: center; /* Center the header text */
 }
 
+/* Style for the list */
 .product-container1 ul {
     list-style: none;
     padding: 0;
 }
 
+/* Style for each item in the list */
 .product-container1 li {
-    border: 1px solid #ddd;
+    border: 2px solid #a4a4a4;
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 10px;
 }
 
+/* Style for product images */
 .product-image {
     width: 150px;
     height: auto;
     border: 1px solid #ccc;
     border-radius: 8px;
     margin-top: 10px;
+}
+
+/* Header for payment page */
+.payment-header {
+    border: 2px solid #a4a4a4; /* Border around the Payment Page header */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center; /* Center the header text */
+}
+
+/* Style for each product item */
+.product-item {
+    border: 2px solid #000; /* Border around each product item */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center; /* Center text inside the item */
+}
+
+/* Style for QR code container */
+.qr-code-container {
+    border: 2px solid #d7d7d7; /* Border around the QR code container */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-align: center; /* Center QR code image inside the container */
+}
+
+.file-preview {
+    margin-top: 10px;
+    text-align: center; /* Center the file preview section */
+}
+
+.file-preview img {
+    max-width: 100%; /* Make sure the image fits within the container */
+    height: auto;
+}
+
+.cpp {
+
+    margin-top: -100px; /* ปรับระยะห่างด้านบน */
+    margin-bottom: 20px; /* ปรับระยะห่างด้านล่าง */
+}
+/* Style for address input section */
+.address-section {
+    margin-top: 20px; /* Space above the address section */
+    padding: 10px; /* Padding inside the address section */
+    border: 1px solid #ccc; /* Border around the address section */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+}
+
+.address-section h4 {
+    margin-top: 0; /* Remove top margin from the heading */
+}
+
+.address-section textarea {
+    width: 100%; /* Full width of the container */
+    border: 1px solid #ccc; /* Border for the textarea */
+    border-radius: 4px; /* Rounded corners */
+    padding: 8px; /* Padding inside the textarea */
+}
+/* Style for QR code container */
+.qr-code-container {
+    border: 2px solid #d7d7d7; /* Border around the QR code container */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-align: center; /* Center QR code image inside the container */
+    background-color: #fff; /* Background color for better visibility */
+}
+
+/* Style for file upload section */
+.file-upload-section {
+    margin-top: 10px; /* Space above the file upload section */
+}
+
+/* Style for address input section */
+.address-section {
+    margin-top: 20px; /* Space above the address section */
+    padding: 10px; /* Padding inside the address section */
+    border: 2px solid #ccc; /* Border around the address section */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+}
+
+.address-section h4 {
+    margin-top: 0; /* Remove top margin from the heading */
+}
+
+.address-section textarea {
+    width: 100%; /* Full width of the container */
+    border: 1px solid #ccc; /* Border for the textarea */
+    border-radius: 4px; /* Rounded corners */
+    padding: 8px; /* Padding inside the textarea */
+    resize: vertical; /* Allow vertical resizing */
+}
+/* Style for address input section */
+/* Style for address input section */
+.address-section {
+    margin-top: 20px; /* Space above the address section */
+    padding: 10px; /* Padding inside the address section */
+    border: 2px solid #ccc; /* Border around the address section */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+}
+
+/* Style for individual address fields */
+.address-field {
+    margin-bottom: 15px; /* Space below each field */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+.address-field label {
+    margin-bottom: 5px; /* Space below the label */
+    text-align: left; /* Align text to the left */
+    font-weight: bold; /* Make label text bold for better readability */
+}
+
+.address-field input,
+.address-field textarea {
+    width: 100%; /* Full width of the container */
+    border: 1px solid #ccc; /* Border for the input fields */
+    border-radius: 4px; /* Rounded corners */
+    padding: 8px; /* Padding inside the input fields */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+/* Confirm Order Button Styling */
+.confirm-order-button {
+    position: fixed; /* Fixed position to stay at the bottom right */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    padding: 10px 20px; /* Padding around the button text */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text color */
+    font-size: 16px; /* Text size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.confirm-order-button:hover {
+    background-color: #2dce50; /* Darker green on hover */
 }

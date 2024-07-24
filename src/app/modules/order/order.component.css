@@ -1,36 +1,64 @@
 .product-container1 {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    
-    
-    gap: 1px; /* ระยะห่างระหว่างสินค้าแต่ละชิ้น */
-    justify-content: space-between;
-    margin: -20px; /* Adjust as needed */
-    background-color:#f4f4f4ce;/* Inner content background */
-  }
-  
-  .product-container1 h2 {
-    text-align: center;
-  }
-  
-  .product-container1 ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .product-container1 li {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .product-image {
-    width: 150px;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-top: 10px;
-  }
-  
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  gap: 1px; /* ระยะห่างระหว่างสินค้าแต่ละชิ้น */
+  justify-content: space-between;
+  margin: -20px; /* Adjust as needed */
+  background-color: #f4f4f4ce; /* Inner content background */
+}
+
+.product-container1 h2 {
+  text-align: center;
+}
+
+.product-container1 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-container1 li {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.product-image {
+  width: 150px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #c4c4c4;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #9e9e9e;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-control button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  padding: 0;
+}
+.product-container1 button:hover {
+   /* Darker color on hover */
+  background: linear-gradient(to right, darkorange, rgb(251, 188, 112));
+}
