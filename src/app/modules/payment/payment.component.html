@@ -1,0 +1,19 @@
+<h2>Payment Page</h2>
+<div *ngIf="cartItems.length > 0">
+  <ul>
+    <li *ngFor="let item of cartItems">
+      <div>
+        <h3>{{ item.productName }}</h3>
+        <p>ประเภท: {{ item.productType[0]?.productTypeName }}</p>
+        <p>ราคา: {{ item.price | currency:'THB' }}</p>
+        <p>จำนวน: {{ item.quantity }}</p>
+        <div *ngFor="let img of item.imgList">
+          <img [src]="img" alt="{{ item.productName }}" class="product-image">
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<div *ngIf="cartItems.length === 0">
+  <p>No items in your order.</p>
+</div>

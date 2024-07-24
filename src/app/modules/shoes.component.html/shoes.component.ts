@@ -3,6 +3,7 @@ import { CallserviceService } from '../services/callservice.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { CartService } from '../services/cart.service'; // Import the CartService
 
 @Component({
   selector: 'app-shoes',
@@ -19,7 +20,8 @@ export class ShoesComponent implements OnInit, OnDestroy {
   constructor(
     private callService: CallserviceService,
     private sanitizer: DomSanitizer,
-    private router: Router
+    private router: Router,
+    private cartService: CartService // Inject the CartService
   ) {}
 
   ngOnInit() {
@@ -85,8 +87,8 @@ export class ShoesComponent implements OnInit, OnDestroy {
     this.router.navigate(['/product/' + productId]);
   }
 
-//   addToCart(product: any) {
-//     this.callService.addToCart(product);
-//     this.router.navigate(['/cart']);
-//   }
+  addToCart(product: any) {
+    this.cartService.addToCart(product); // Add product to cart
+    this.router.navigate(['/order']); // Navigate to OrderComponent
+  }
 }

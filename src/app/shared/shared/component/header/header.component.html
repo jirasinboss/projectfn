@@ -13,7 +13,8 @@
         <li *ngIf="null != userDetail && userDetail.roleId == 1"><a [routerLink]="['/manage-user']" routerLinkActive="router-link-active"  class="nav-link px-2 text-white">จัดการลูกค้า</a></li>
         <li *ngIf="null != userDetail && userDetail.roleId == 1"><a [routerLink]="['/manage-product']" class="nav-link px-2 text-white">จัดการสินค้า</a></li>
         <li *ngIf="null != userDetail && userDetail.roleId == 1"><a [routerLink]="['/report']" class="nav-link px-2 text-white">รายงาน</a></li>
-        <li *ngIf="null != userDetail"><a [routerLink]="['/order']" routerLinkActive="router-link-active" class="nav-link px-2 text-white">คำสั่งซื้อ/จ่าย</a></li>
+        <li *ngIf="null != userDetail"><a [routerLink]="['/order']" routerLinkActive="router-link-active" class="nav-link px-2 text-white">คำสั่งซื้อ</a></li>
+        <li *ngIf="null != userDetail"><a [routerLink]="['/payment']" routerLinkActive="router-link-active" class="nav-link px-2 text-white">จ่ายเงิน</a></li>
       </ul> 
 
       <div class="text-end" *ngIf="null == userDetail">
