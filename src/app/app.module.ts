@@ -15,13 +15,17 @@ import { ShoesComponent } from './modules/shoes.component.html/shoes.component';
 import { OrderComponent } from './modules/order/order.component';
 import { PaymentComponent } from './modules/payment/payment.component'; 
 import { PaymentService } from './modules/services/payment.service'; // ตรวจสอบให้แน่ใจว่ามีเส้นทางที่ถูกต้อง
+import { CommonModule } from '@angular/common';
+import { OrderPayComponent } from './modules/order-pay/order-pay.component';
+import { OrderService } from './modules/services/order.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShoesComponent,
     OrderComponent,
-    PaymentComponent 
+    PaymentComponent,
+    OrderPayComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +38,10 @@ import { PaymentService } from './modules/services/payment.service'; // ตร�
     HttpClientModule,
     NgxPermissionsModule.forRoot(),
     ReactiveFormsModule,
-    NgxLoadingModule.forRoot({})
+    NgxLoadingModule.forRoot({}),
+    CommonModule
   ],
-  providers: [DataSharingService, PaymentService], 
+  providers: [DataSharingService, PaymentService, OrderService], // OrderService ที่นี่
   bootstrap: [AppComponent]
 })
 export class AppModule { }

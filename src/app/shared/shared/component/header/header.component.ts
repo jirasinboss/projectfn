@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
   logout(){
     sessionStorage.removeItem("userDetail")
     this.dataSharingService.userDetail.next(true);
-    this.router.navigate(['/login']);
+    this.router.navigate(['/shoes']);
   }
 
 }

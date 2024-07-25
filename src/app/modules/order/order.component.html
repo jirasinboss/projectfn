@@ -5,8 +5,9 @@
       <li *ngFor="let item of cartItems">
         <div>
           <h3>{{ item.productName }}</h3>
+          <p>รายละเอียดสินค้า: {{ item.productDesc }}</p>
           <p>ประเภท: {{ item.productType[0]?.productTypeName }}</p>
-          <p>ราคา: {{ item.price | currency:'THB' }}</p>
+          <p>ราคา: {{ (item.price * item.quantity) | currency:'THB' }}</p>
           <div>
             <button (click)="decreaseQuantity(item)">-</button>
             <span>{{ item.quantity }}</span>
@@ -18,6 +19,7 @@
         </div>
       </li>
     </ul>
+    
     <button (click)="goToPayment()">Make Payment</button>
   </div>
   <div *ngIf="cartItems.length === 0">

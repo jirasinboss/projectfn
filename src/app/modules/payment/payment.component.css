@@ -191,3 +191,19 @@ body {
 .confirm-order-button:hover {
     background-color: #2dce50; /* Darker green on hover */
 }
+/* Style for the upload success message */
+.upload-success {
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid #28a745; /* Green border */
+    border-radius: 8px;
+    background-color: #eafaf1; /* Light green background */
+    color: #28a745; /* Green text color */
+    text-align: center; /* Center text */
+}
+
+.success-icon {
+    font-size: 24px; /* Adjust icon size */
+    margin-right: 5px; /* Space between icon and text */
+}
+

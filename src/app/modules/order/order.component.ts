@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
-import { PaymentService } from '../services/payment.service'; // เพิ่มการนำเข้า PaymentService
+import { PaymentService } from '../services/payment.service';
 
 @Component({
   selector: 'app-order',
@@ -10,21 +10,22 @@ import { PaymentService } from '../services/payment.service'; // เพิ่ม
 })
 export class OrderComponent implements OnInit {
   cartItems: any[] = [];
+  totalCartPrice: number = 0;
 
   constructor(
     private cartService: CartService,
-    private paymentService: PaymentService, // เพิ่ม PaymentService ในคอนสตรัคเตอร์
+    private paymentService: PaymentService,
     private router: Router
   ) {}
 
   ngOnInit() {
     this.cartItems = this.cartService.getCart();
-    // กำหนดค่าเริ่มต้นให้กับ quantity เป็น 1 ถ้ายังไม่ได้ตั้งค่า
     this.cartItems.forEach(item => {
       if (!item.quantity || item.quantity < 1) {
         item.quantity = 1;
       }
     });
+    this.calculateTotalCartPrice();
   }
 
   goToPayment() {
@@ -34,6 +35,7 @@ export class OrderComponent implements OnInit {
 
   increaseQuantity(item: any) {
     item.quantity++;
+    this.calculateTotalCartPrice();
   }
 
   decreaseQuantity(item: any) {
@@ -42,6 +44,7 @@ export class OrderComponent implements OnInit {
     } else {
       this.removeItem(item);
     }
+    this.calculateTotalCartPrice();
   }
 
   removeItem(item: any) {
@@ -49,5 +52,14 @@ export class OrderComponent implements OnInit {
     if (index > -1) {
       this.cartItems.splice(index, 1);
     }
+    this.calculateTotalCartPrice();
+  }
+
+  calculateTotalItemPrice(item: any): number {
+    return item.price * item.quantity;
+  }
+
+  calculateTotalCartPrice() {
+    this.totalCartPrice = this.cartItems.reduce((total, item) => total + this.calculateTotalItemPrice(item), 0);
   }
 }

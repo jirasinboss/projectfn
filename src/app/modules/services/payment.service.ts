@@ -5,14 +5,32 @@ import { Injectable } from '@angular/core';
 })
 export class PaymentService {
   private cartItems: any[] = [];
+  private uploadedFileUrl: string | ArrayBuffer | null = null;
+  private address: any = {};
 
   constructor() {}
 
-  setCartItems(items: any[]) {
+  getCartItems(): any[] {
+    return this.cartItems;
+  }
+
+  setCartItems(items: any[]): void {
     this.cartItems = items;
   }
 
-  getCartItems(): any[] {
-    return this.cartItems;
+  getUploadedFileUrl(): string | ArrayBuffer | null {
+    return this.uploadedFileUrl;
+  }
+
+  setUploadedFileUrl(url: string | ArrayBuffer | null): void {
+    this.uploadedFileUrl = url;
+  }
+
+  getAddress(): any {
+    return this.address;
+  }
+
+  setAddress(address: any): void {
+    this.address = address;
   }
 }
